@@ -17,26 +17,28 @@
     <nav class="nav-section">
       <div class="nav-links">
         <div class="nav-home">
-          <button class="home-btn">home</button>
-          <span class="vertical-home"></span>
+          <a href="#home"><button class="home-btn">home</button></a>
+          <span class="vertical-home visible"></span>
         </div>
         <div class="nav-projects">
-          <button class="projects-btn">projects</button>
+          <a href="#projects"
+            ><button class="projects-btn" href="test">projects</button></a
+          >
           <span class="vertical-projects"></span>
         </div>
         <div class="nav-about">
-          <button class="about-btn">about</button>
+          <a href="#about"><button class="about-btn">about</button></a>
           <span class="vertical-about"></span>
         </div>
         <div class="nav-contact">
-          <button class="contact-btn">contact</button>
+          <a href="#contact"><button class="contact-btn">contact</button></a>
           <span class="vertical-contact"></span>
         </div>
       </div>
       <button class="nav-cv">download CV</button>
     </nav>
     <span class="underline"></span>
-    <section class="home-section">
+    <section class="home-section" id="home">
       <div class="home-text">
         <h2 class="home-text-first">
           Hello, I’m Michael.<br />
@@ -51,7 +53,7 @@
         </h2>
       </div>
     </section>
-    <section class="projects-section">
+    <section class="projects-section" id="projects">
       <div class="img-placeholder">
         <div class="img-text"><p>View case study</p></div>
       </div>
@@ -63,7 +65,6 @@
         </p>
         <p class="highlight-1">Technology used</p>
         <div class="logo-container">
-          <!-- <span class="tooltiptext">HTML</span> -->
           <img class="html-logo" src="./images/html.png" alt="html logo" />
           <img src="./images/css.png" alt="css logo" />
           <img src="./images/js.png" alt="js logo" />
@@ -78,7 +79,7 @@
         </div>
       </div>
     </section>
-    <section class="about-section">
+    <section class="about-section" id="about">
       <div class="about-part1">
         <h2 class="highlight-2">psychology</h2>
         <p>
@@ -111,7 +112,7 @@
         challenges, improve and learn.
       </h2>
     </section>
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <h2>
         Feel free to send me an email or give me a call :) <br />
         some-email@gmail.com <br />
