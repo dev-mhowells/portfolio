@@ -1,5 +1,6 @@
 const homeSection = document.querySelector(".home-section");
 const aboutSection = document.querySelector(".about-section");
+const contactSection = document.querySelector(".contact-section");
 const nav = document.querySelector(".nav-section");
 const homeText = document.querySelector(".home-text");
 const sections = document.querySelectorAll("section");
@@ -8,6 +9,7 @@ const projects = document.querySelector(".projects-section");
 const verticalHome = document.querySelector(".vertical-home");
 const verticalProjects = document.querySelector(".vertical-projects");
 const verticalAbout = document.querySelector(".vertical-about");
+const verticalContact = document.querySelector(".vertical-contact");
 
 const options = {
   root: null,
@@ -57,7 +59,6 @@ const observerForPrj = new IntersectionObserver(function (entries, observer) {
 
 const observerForAbout = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
-    console.log("hello", entry);
     verticalAbout.style.borderLeft = "solid 2px #00ddff";
     if (entry.isIntersecting) {
       verticalAbout.classList.remove("hidden");
@@ -73,9 +74,30 @@ const observerForAbout = new IntersectionObserver(function (entries, observer) {
   });
 }, options2);
 
+const observerForContact = new IntersectionObserver(function (
+  entries,
+  observer
+) {
+  entries.forEach((entry) => {
+    verticalContact.style.borderLeft = "solid 2px #00ddff";
+    if (entry.isIntersecting) {
+      verticalContact.classList.remove("hidden");
+      verticalContact.classList.add("visible");
+
+      underline.classList.remove("underline-short");
+      underline.classList.add("underline-long");
+
+      return;
+    } else {
+      verticalContact.classList.add("hidden");
+    }
+  });
+});
+
 //  entry.target.style.opacity = entry.intersectionRatio;
 
 observer.observe(projects);
 observerForPrj.observe(projects);
 observerForHome.observe(homeSection);
 observerForAbout.observe(aboutSection);
+observerForContact.observe(contactSection);
